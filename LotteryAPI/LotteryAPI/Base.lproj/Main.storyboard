@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KsM-OL-zRg">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lottery View Controller-->
+        <scene sceneID="vkL-NU-O97">
+            <objects>
+                <viewController storyboardIdentifier="LotteryViewController" id="KsM-OL-zRg" customClass="LotteryViewController" customModule="LotteryAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9G3-cu-teC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N85-iW-akS">
+                                <rect key="frame" x="0.0" y="415.66666666666669" width="393" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mme-Ft-qLJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRx-TX-RVH">
+                                <rect key="frame" x="46.666666666666657" y="139" width="300" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="lUW-ns-sP3"/>
+                                    <constraint firstAttribute="height" constant="36" id="pj1-T4-MgN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="enterOntapped:" destination="KsM-OL-zRg" eventType="editingDidEndOnExit" id="im2-Jj-omJ"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="faz-Sn-wXk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="faz-Sn-wXk" firstAttribute="trailing" secondItem="N85-iW-akS" secondAttribute="trailing" id="I76-6g-R9O"/>
+                            <constraint firstItem="N85-iW-akS" firstAttribute="leading" secondItem="faz-Sn-wXk" secondAttribute="leading" id="JCE-vk-bDq"/>
+                            <constraint firstItem="GRx-TX-RVH" firstAttribute="top" secondItem="faz-Sn-wXk" secondAttribute="top" constant="80" id="XkI-N6-4YR"/>
+                            <constraint firstItem="N85-iW-akS" firstAttribute="centerX" secondItem="9G3-cu-teC" secondAttribute="centerX" id="YHq-3M-gdE"/>
+                            <constraint firstItem="N85-iW-akS" firstAttribute="centerY" secondItem="9G3-cu-teC" secondAttribute="centerY" id="dag-Ko-foy"/>
+                            <constraint firstItem="GRx-TX-RVH" firstAttribute="centerX" secondItem="9G3-cu-teC" secondAttribute="centerX" id="xZa-we-Fy5"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="azg-eI-xiM" appends="YES" id="fPK-29-tz0"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="N85-iW-akS" id="mIN-kl-zwV"/>
+                        <outlet property="roundTextField" destination="GRx-TX-RVH" id="Zxa-ON-Cgq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEZ-qN-r3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="azg-eI-xiM">
+                    <connections>
+                        <action selector="dismissOnTap:" destination="KsM-OL-zRg" id="zC4-Wp-sLK"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="961" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
